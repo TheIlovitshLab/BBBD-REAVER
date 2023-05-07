@@ -1,4 +1,5 @@
 *.asv
 *.pptx
 *.mat
+*.prj
 temp/
