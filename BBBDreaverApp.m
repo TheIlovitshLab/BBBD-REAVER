@@ -38,15 +38,15 @@ classdef BBBDreaverApp < matlab.apps.AppBase
             control_dir = app.ControldirectoryEditField.Value;
             test_dir = app.TestdirectoryEditField.Value;
             n_px = app.perivascularwidthpxSpinner.Value;
-            diffu = app.startDistSpinner.Value;
+            from_px = app.startDistSpinner.Value;
             if ~isempty(control_dir)
                 disp('Starting to work on control files')
-                analyze_entire_folder(n_px,control_dir,diffu);
+                analyze_entire_folder(n_px,control_dir,from_px);
                 disp('Finished processing control files')
             end
             if ~isempty(test_dir)
                 disp('Starting to work on test files')
-                analyze_entire_folder(n_px,test_dir,diffu); 
+                analyze_entire_folder(n_px,test_dir,from_px); 
                 disp('Finished processing test files')
             end
         end
@@ -72,7 +72,7 @@ classdef BBBDreaverApp < matlab.apps.AppBase
 
         % Button pushed function: CreateanalysisobjectButton
         function CreateanalysisobjectButtonPushed(app, event)
-            results = EB_analysis;
+            results = Ext_analysis;
             assignin("base","results",results);
         end
 
@@ -97,7 +97,7 @@ classdef BBBDreaverApp < matlab.apps.AppBase
         % Create UIFigure and components
         function createComponents(app)
 
-            % Create EBreaverUIFigure and hide until all components are created
+            % Create BBBDreaverUIFigure and hide until all components are created
             app.BBBDreaverUIFigure = uifigure('Visible', 'off');
             app.BBBDreaverUIFigure.Color = [0.9412 0.9412 0.9412];
             app.BBBDreaverUIFigure.Position = [100 100 535 368];
@@ -189,13 +189,13 @@ classdef BBBDreaverApp < matlab.apps.AppBase
     methods (Access = public)
 
         % Construct app
-        function app = EBreaverApp
+        function app = BBBDreaverApp
 
             % Create UIFigure and components
             createComponents(app)
 
             % Register the app with App Designer
-            registerApp(app, app.EBreaverUIFigure)
+            registerApp(app, app.BBBDreaverUIFigure)
 
             % Execute the startup function
             runStartupFcn(app, @startupFcn)

@@ -1,12 +1,11 @@
-function file_path = ...
-    analyze_entire_folder(n_px, path, from_px)
+function file_path = analyze_entire_folder(n_px, path, from_px)
 % Function to iterate over a directory of images pre-processed by REAVER 
 % (with pre-existing ".mat" analysis files), and compute BBBD marker leakage
 % Input arguements:
 %     n_px = width of perivascular are in pixels
 %     path = path to a folder pre-processed by REAVER
-%     from_px = distance from vessel wall to start the eb extraction from
-%       [pixels]
+%     from_px = distance from vessel wall to start the intensity
+%            measurement from [pixels]
 % Output arguements:
 %     file_path - path to a .mat file that will contain a table of n rows
 %         corresponding to n files in path. for each file it contains all
@@ -30,8 +29,8 @@ function file_path = ...
         {all_files.name});
     summary = load(fullfile(path,all_files(summary_idx).name));
     data_files = all_files(~summary_idx);
-    EB_analysis = cellfun(@(x) strfind(x,'EB_analysis'),{data_files.name},'UniformOutput',0);
-    non_analysis = cellfun(@(x) isempty(x),EB_analysis);
+    Ext_analysis = cellfun(@(x) strfind(x,'Ext_analysis'),{data_files.name},'UniformOutput',0);
+    non_analysis = cellfun(@(x) isempty(x),Ext_analysis);
     data_files = data_files(non_analysis);
     verified = summary.userVerified(cell2mat(summary.userVerified(:,2)),1);
     verified = cellfun(@(x) strrep(x,'.tif','.mat'),verified,'UniformOutput',false);
@@ -65,7 +64,7 @@ function file_path = ...
     if from_px ~= 0
         str = [str,'from_',num2str(from_px),'px_'];
     end
-    str = [str,'_to_',num2str(from_px+n_px),'px'];
+    str = [str,'to_',num2str(from_px+n_px),'px'];
     str = [str,'.mat'];
     file_path = fullfile(path,str);
     save(file_path,'res');

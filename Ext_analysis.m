@@ -328,7 +328,7 @@ classdef Ext_analysis
             end
             ylim([0,maxy*1.1]);
             legend([b1,b2],'control','MB + FUS');
-            title(sprintf('[%d,%d] px]',...
+            title(sprintf('[%d,%d] px',...
                 obj.from_px,obj.from_px+obj.n_px));
             ylabel('Median BBBD marker intensity in perivascular area [A.U.]')     
         end

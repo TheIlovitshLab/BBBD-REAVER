@@ -1,9 +1,11 @@
-function metric_st = features_from_frame(mat_path,n_px)
+function metric_st = features_from_frame(mat_path,n_px, from_px)
 % Custom image processing and measurements extraction function.
 % Inputs:
 %     mat_math = path to a .mat file containing the verified image
 %                parameters, BW image and wireframe
 %     n_px = Size of neighborhood around a blood vessel (in px)
+%     from_px = width around a blood vessel to start intensity measurement
+%               from (in px)
 % Output:
 %     metric_st = structure with all measurements. containing the following
 %         fields:                   
@@ -59,6 +61,7 @@ bbbd_marker_median{1,1} = ...
     calc_ext_in_range(rcind_seg_cell,...
     all_seg_rads.max,st.derivedPic.BW_2,...
     redIm,...
+    from_px,...
     n_px);
 
 metric_st.bbbd_marker_median = bbbd_marker_median;

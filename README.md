@@ -3,7 +3,8 @@ Rapid Editable Analysis of Vessel Elements Routine, utilized for quantification
 of flurescent dye extravasation into the brain parenchyma during BBB opening.
 
 ## Dependencies:
-* Tested on MATLAB 2021a, requires image processing toolbox.
+* Tested on MATLAB 2021a, requires "Image Processing Toolbox" and "Statistics and Machine Learning Toolbox".
+
 * Before starting the process make sure the control and test tiff files are placed in seperate folders
 
 ## Example files
