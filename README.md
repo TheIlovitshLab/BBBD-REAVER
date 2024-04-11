@@ -2,6 +2,65 @@
 Rapid Editable Analysis of Vessel Elements Routine, utilized for quantification
 of flurescent dye extravasation into the brain parenchyma during BBB opening.
 
+## Paper
+
+This repository provides the UNet segmentation in the following papers:
+
+**Enhanced capillary delivery with nanobubble-mediated blood-brain barrier opening** <br/>
+[Roni Gattegno](https://www.linkedin.com/in/roni-gattegno/), [Lilach Arbel](https://www.linkedin.com/in/lilach-arbel/), [Noa Riess](https://www.linkedin.com/in/noa-riess-228807217/), [Hila Shinar](https://www.linkedin.com/in/hila-shinar/?originalSubdomain=il), [Sharon Katz](https://www.linkedin.com/in/sharon-kz/) and [Tali Ilovitsh](https://www.linkedin.com/in/tali-ilovitsh/) <br/>
+Tel Aviv University <br/>
+Journal of Controlled Release ([JCR](https://www.sciencedirect.com/journal/journal-of-controlled-release)) <br/>
+[paper](https://www.sciencedirect.com/science/article/abs/pii/S0168365924002220?via%3Dihub) | [code](https://github.com/TheIlovitshLab/EB_reaver_BBBD)
+
+**Protocol to assess extravasation of fluorescent molecules in mice after ultrasound-mediated blood-brain barrier opening** <br/>
+[Lea Peko](https://www.linkedin.com/in/lea-peko/), [Sharon Katz](https://www.linkedin.com/in/sharon-kz/), [Roni Gattegno](https://www.linkedin.com/in/roni-gattegno/) and [Tali Ilovitsh](https://www.linkedin.com/in/tali-ilovitsh/) <br/>
+Tel Aviv University <br/>
+[STAR Protocols](https://www.cell.com/star-protocols/home) <br/>
+[paper](https://www.sciencedirect.com/science/article/pii/S2666166723007372) | [code](https://github.com/TheIlovitshLab/BBBD-REAVER)
+
+**Diameter-dependent assessment of microvascular leakage following ultrasound-mediated blood brain barrier opening** <br/>
+[Sharon Katz](https://www.linkedin.com/in/sharon-kz/), [Roni Gattegno](https://www.linkedin.com/in/roni-gattegno/), [Lea Peko](https://www.linkedin.com/in/lea-peko/), [Romario Zarik](https://www.linkedin.com/in/romariozarik/), [Yulie Hagani](https://www.linkedin.com/in/yulie-hagani/) and [Tali Ilovitsh](https://www.linkedin.com/in/tali-ilovitsh/) <br/>
+Tel Aviv University <br/>
+[iScience](https://www.sciencedirect.com/journal/iscience) <br/>
+[paper](https://www.sciencedirect.com/science/article/pii/S2589004223010428) | [code](https://github.com/TheIlovitshLab/BBBD-REAVER)
+
+
+## Citation
+If you use this code for your research, please cite our paper:
+```
+@article{gattegno2023enhanced,
+  title={Enhanced capillary delivery with nanobubble-mediated blood-brain barrier opening and advanced high resolution vascular segmentation},
+  author={Gattegno, Roni and Arbel, Lilach and Riess, Noa and Kats, Sharon and Ilovitsh, Tali},
+  journal={bioRxiv},
+  pages={2023--12},
+  year={2023},
+  publisher={Cold Spring Harbor Laboratory}
+}
+
+@article{peko2024protocol,
+  title={Protocol to assess extravasation of fluorescent molecules in mice after ultrasound-mediated blood-brain barrier opening},
+  author={Peko, Lea and Katz, Sharon and Gattegno, Roni and Ilovitsh, Tali},
+  journal={STAR protocols},
+  volume={5},
+  number={1},
+  pages={102770},
+  year={2024},
+  publisher={Elsevier}
+}
+
+@article{katz2023diameter,
+  title={Diameter-dependent assessment of microvascular leakage following ultrasound-mediated blood-brain barrier opening},
+  author={Katz, Sharon and Gattegno, Roni and Peko, Lea and Zarik, Romario and Hagani, Yulie and Ilovitsh, Tali},
+  journal={Iscience},
+  volume={26},
+  number={6},
+  year={2023},
+  publisher={Elsevier}
+}
+
+
+```
+
 ## Dependencies:
 * Tested on MATLAB 2021a, requires "Image Processing Toolbox" and "Statistics and Machine Learning Toolbox".
 
