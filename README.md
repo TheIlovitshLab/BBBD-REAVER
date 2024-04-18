@@ -28,13 +28,14 @@ Tel Aviv University <br/>
 ## Citation
 If you use this code for your research, please cite our paper:
 ```
-@article{gattegno2023enhanced,
+@article{gattegno2024enhanced,
   title={Enhanced capillary delivery with nanobubble-mediated blood-brain barrier opening and advanced high resolution vascular segmentation},
-  author={Gattegno, Roni and Arbel, Lilach and Riess, Noa and Kats, Sharon and Ilovitsh, Tali},
-  journal={bioRxiv},
-  pages={2023--12},
-  year={2023},
-  publisher={Cold Spring Harbor Laboratory}
+  author={Gattegno, Roni and Arbel, Lilach and Riess, Noa and Shinar, Hila and Katz, Sharon and Ilovitsh, Tali},
+  journal={Journal of Controlled Release},
+  volume={369},
+  pages={506--516},
+  year={2024},
+  publisher={Elsevier}
 }
 
 @article{peko2024protocol,
